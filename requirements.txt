@@ -1,0 +1,27 @@
+# LLM — DeepSeek via OpenAI-compatible SDK
+openai>=1.40.0
+
+# Sparse Retrieval
+rank-bm25>=0.2.2
+
+# Data Processing & Config
+numpy>=1.26.0
+pandas>=2.2.0
+pydantic>=2.8.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.2
+
+# HTML Email Templating
+jinja2>=3.1.4
+
+# Streamlit UI
+streamlit>=1.37.0
+
+# Utilities
+tqdm>=4.66.0
+
+# Optional: only needed for local embedding fallback
+# sentence-transformers>=3.0.0
+
+# Optional: for faiss-based vector store (not needed, we use numpy)
+# faiss-cpu>=1.8.0

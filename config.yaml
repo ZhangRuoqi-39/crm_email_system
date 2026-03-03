@@ -1,0 +1,61 @@
+# CRM Email Generation System — Configuration
+# Tencent IEGG Capstone Project
+
+llm:
+  provider: "deepseek"
+  model: "deepseek-chat"
+  temperature: 0.7
+  max_tokens: 2048
+
+embedding:
+  provider: "qwen"
+  model: "text-embedding-v3"
+  batch_size: 32
+
+rerank:
+  provider: "qwen"
+  model: "gte-rerank"
+  top_n: 3
+
+retrieval:
+  top_k: 10
+  rerank_top_k: 3
+  bm25_weight: 0.4
+  dense_weight: 0.6
+  rrf_k: 60
+
+generation:
+  num_variants: 3
+  variant_styles:
+    - "urgency"
+    - "storytelling"
+    - "direct_value"
+  max_subject_length: 60
+  max_body_length: 400
+
+scoring:
+  weights:
+    relevance: 0.30
+    tone: 0.25
+    compliance: 0.25
+    creativity: 0.20
+  compliance_threshold: 0.70
+  banned_words:
+    - "guaranteed"
+    - "100% free"
+    - "act now or else"
+    - "click here immediately"
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  templates_dir: "data/templates"
+  historical_emails: "data/processed/historical_emails.json"
+  campaign_briefs: "data/processed/campaign_briefs.json"
+  faiss_index: "data/processed/faiss_index"
+
+evaluation:
+  golden_set_path: "data/processed/golden_test_set.json"
+  baseline_open_rate: 0.21
+  baseline_ctr: 0.030
+  uplift_simulation_runs: 100
