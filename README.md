@@ -30,8 +30,6 @@ Global live-service games require high-volume, personalised CRM campaigns across
 - Predicts performance uplift relative to industry baselines via Monte Carlo simulation and estimates operational efficiency savings
 - Renders campaign-themed HTML email previews and surfaces all results in a 5-page interactive Streamlit demo
 
-**Target role alignment:** Designed to demonstrate direct relevance to Tencent IEGG CRM & SmartLink product requirements, covering content ingestion pipelines, LLM-based generation, automated quality scoring, safety compliance, and end-to-end demo delivery.
-
 ---
 
 ## System Architecture
@@ -368,11 +366,3 @@ Baseline values are calibrated to Mailchimp Gaming Industry benchmarks (Open Rat
 - Build a feedback loop: collect real send performance data → retrain uplift model → continuously improve generation quality
 - Extend to other CRM content types: push notifications, in-app messages, SMS
 - Integrate player behavioural signals (login frequency, spend history) as additional personalisation inputs to the Campaign Brief
-
----
-
-## Acknowledgements
-
-System architecture inspired by the RAG pipeline design patterns documented in internal DEV_SPEC.md, adapted for the CRM email generation domain.
-
-Baseline performance metrics sourced from Mailchimp Email Marketing Benchmarks (Gaming Industry, 2024).
